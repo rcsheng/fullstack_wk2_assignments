@@ -57,15 +57,17 @@ describe("filter", function() {
     else
       return false;
   };
+  
+  var oddFilter = function(element) {
+      return !evenFilter(element);
+    };
 
   it("filters an array based on evens", function() {
     expect(filter([1, 2, 3, 4, 5, 6, 7, 8], evenFilter)).toEqual([2, 4, 6, 8]);
   });
 
   it("filters an array based on odds", function() {
-    var oddFilter = function(element) {
-      return !evenFilter(element);
-    };
+
     expect(filter([1, 2, 3, 4, 5, 6, 7, 8], oddFilter)).toEqual([1, 3, 5, 7]);
   });
 
