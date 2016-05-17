@@ -20,10 +20,13 @@ describe("The arguments array", function() {
 // This will explore the idea that JS' functions are just values that can be passed aroudn.
 // For example, here we can have a function that creates another function.
 describe("higher-order functions", function() {
-  it('means that a function can take a function as an argument', function() {
-    var callThisFunction = function() {
+  
+  var callThisFunction = function() {
       return "Called Value";
     };
+    
+  it('means that a function can take a function as an argument', function() {
+    
 
     // Create a function that runs functions and returns their "return" value
     expect(yourFunctionRunner(callThisFunction)).toEqual("Called Value");
