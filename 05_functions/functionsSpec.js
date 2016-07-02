@@ -73,6 +73,7 @@ describe("once", function() {
     increment();
     increment();
 
+
     expect(num).toEqual(1);
   });
 });

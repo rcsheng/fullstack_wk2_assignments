@@ -113,13 +113,14 @@ describe("reduce takes an array, starting point, and combining function and", fu
     };
     expect(reduce([3, 5, 7], 0, add)).toEqual(15);
   });
-
+  word_array = ["hello there this is line 1", "and this is line 2"];
   it("counts the number of words in an array of strings", function() {
-    word_array = ["hello there this is line 1", "and this is line 2"];
+    
     expect(reduce(word_array, 0, countWordsInReduce)).toEqual(11);
   });
 
   it('should not use Array.prototype.reduce', function () {
+    //word_array = ["hello there this is line 1", "and this is line 2"];
     reduce(word_array, 0, countWordsInReduce);
     expect(Array.prototype.reduce.calls.any()).toEqual(false)
   });
